@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ltr" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<style>
+			.ev-footer,
+			.create_rom_footer {
+				display: flex;
+				align-items: center;
+				padding: 15px 0;
+				justify-content: center;
+				flex-direction: column;
+			}
+			.ev-footer__logo svg {
+				display: flex;
+				width: 30px;
+				height: 30px;
+			}
+			.ev-footer__logo a {
+				text-decoration: none;
+				font-size: 14px;
+				font-family: inherit;
+			}
+			.ev-footer__link {
+				display: flex;
+				text-decoration: underline;
+			}
+			.ev-footer__link:hover {
+				text-decoration: none;
+			}
+			:active,
+			:focus,
+			:hover,
+			:visited,
+			a,
+			a:active,
+			a:focus,
+			a:hover,
+			a:visited {
+				outline: 0 !important;
+			}
+			::-moz-focus-inner {
+				border: 0;
+				outline: 0;
+			}
+		</style>
+		<link rel="preconnect" href="#" />
+
+		<title>
+			Pirkite Depanten pigiai. Kainos, atsiliepimai. Užsisakykite Depanten
+			dabar!
+		</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="icon" href="#" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="./index.css" />
+
+		<meta name="referrer" content="unsafe-url" />
+		<meta
+			name="Reverso extension"
+			content="3.3.274"
+			id="Reverso_extension___elForCheckedInstallExtension"
+		/>
+
+		<style type="text/css">
+			.order-modal,
+			.users-online {
+				cursor: pointer;
+				position: fixed;
+				right: 20px;
+				top: 120px;
+				width: 320px;
+				background-color: rgba(0, 0, 0, 0.9);
+				color: #fff;
+				transition: all 1s;
+				font-size: 19px;
+				line-height: 22px;
+				border-radius: 10px;
+				z-index: 9999;
+				opacity: 0;
+				visibility: hidden;
+			}
+			.order-modal > div,
+			.users-online > div {
+				margin: 10px;
+			}
+			.order-modal > div > span,
+			.users-online > div > span {
+				display: inline-block;
+				vertical-align: middle;
+				width: calc(100% - 75px);
+				margin-left: 10px;
+			}
+			.show-order,
+			.show-order-last {
+				opacity: 1;
+				visibility: visible;
+				transition: all 1s;
+			}
+			.blink {
+				color: red !important;
+				animation-name: blinker;
+				animation-duration: 1s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+				-webkit-animation-name: blinker;
+				-webkit-animation-duration: 1s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+				-moz-animation-name: blinker;
+				-moz-animation-duration: 1s;
+				-moz-animation-timing-function: linear;
+				-moz-animation-iteration-count: infinite;
+				text-decoration: line-through;
+			}
+			.blink_me {
+				font-size: 24px;
+				color: red;
+				font-weight: 700;
+			}
+			.show-order-last:before,
+			.show-order:before {
+				-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+			.show-order-last:after,
+			.show-order-last:before,
+			.show-order:after,
+			.show-order:before {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: -15px;
+				width: 15px;
+				height: 5px;
+				background: red;
+				transition: all 1s;
+			}
+			.show-order-last:after,
+			.show-order:after {
+				-webkit-transform: rotate(-45deg);
+				-ms-transform: rotate(-45deg);
+				-o-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+			}
+
+			.everad-sprite-bucket {
+				background-position: -5px -5px;
+			}
+			.everad-sprite-callback {
+				background-position: -65px -5px;
+			}
+			.everad-sprite-online_user {
+				background-position: -5px -65px;
+			}
+			@media screen and (max-width: 767px) {
+				.cookie-popup-on .order-modal,
+				.cookie-popup-on .users-online {
+					top: auto;
+					right: 10px;
+					bottom: 35px;
+					width: 300px;
+				}
+			}
+			@media screen and (max-width: 405px) {
+				.cookie-popup-on .order-modal,
+				.cookie-popup-on .users-online {
+					bottom: 45px;
+				}
+			}
+			@media screen and (max-width: 335px) {
+				.cookie-popup-on .order-modal,
+				.cookie-popup-on .users-online {
+					bottom: 60px;
+				}
+			}
+			@media screen and (max-width: 767px) {
+				.order-modal,
+				.users-online {
+					top: auto;
+					right: 10px;
+					bottom: 10px;
+					width: 300px;
+				}
+			}
+			@-moz-keyframes blinker {
+				0% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			@-webkit-keyframes blinker {
+				0% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+			@keyframes blinker {
+				0% {
+					opacity: 1;
+				}
+				50% {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<div class="info__header">
+				<a href="#" style="text-decoration: none; color: inherit">
+					<ul class="container">
+						<li>ค้นหา</li>
+						<li>ติดตาม</li>
+						<li>ข่าว</li>
+						<li>การโฆษณา</li>
+						<li>ธุรกิจ</li>
+						<li>ช่วย</li>
+						<li>เกี่ยวกับเรา</li>
+					</ul>
+				</a>
+			</div>
+			<div class="container">
+				<a href="#" style="text-decoration: none; color: inherit">
+					<picture>
+						<source type="image/webp" srcset="#" />
+						<img alt="" class="mainLogo" src="#" />
+					</picture>
+				</a>
+			</div>
+		</header>
+		<div id="app">
+			<div class="App App--isMaterial">
+				<main class="App-content" role="main">
+					<div class="Material--feature Material--default">
+						<div class="Material-container">
+							<div class="MediaMaterial MediaMaterial--fullWidth">
+								<div class="MediaMaterial-header">
+									<div class="MediaMaterialHeader">
+										<figure class="Figure" style="text-align: center">
+											<picture>
+												<source type="image/webp" srcset="./images/news1.jpg" />
+												<img alt="" src="#" />
+											</picture>
+										</figure>
+										<h1 class="MediaMaterialHeader-title">
+											<span class="MediaMaterialHeader-first">
+												ไวรัลดังทั่วไทย!
+											</span>
+											เครื่องรางนำโชคดึงดูดโชคลาภและเงินทอง:
+											ความจริงหรืออิงนิยาย?
+											รายงานพิเศษของเราที่จะมาเปิดเผยความจริงทั้งหมด!<span
+												class="MediaMaterialHeader-separator"
+											>
+											</span>
+										</h1>
+									</div>
+									<div class="MediaMaterial-meta">
+										<div class="MaterialMeta MaterialMeta--time">
+											<span class="date-4 time">12.06.2024 17:45</span>
+										</div>
+									</div>
+								</div>
+
+								<div class="MediaMaterial-body">
+									<div class="MediaMaterial-materialContent">
+										<div class="MaterialContent MaterialContent--bannerless">
+											<div class="DangerousHTML">
+												<div
+													class="Body"
+													id="article_main"
+													style="display: block"
+												>
+													<blockquote
+														style="
+															font-size: 24px;
+															font-weight: bold;
+															border-left: 3px solid rgb(38, 38, 38);
+															padding-left: 25px;
+															font-family: Arial;
+														"
+													>
+														การสอบสวนที่สร้างความตกใจให้กับประเทศไทย!
+													</blockquote>
+													<figure class="Figure" style="text-align: center">
+														<picture>
+															<source
+																type="image/webp"
+																srcset="./images/news2.jpg"
+															/>
+															<img alt="" src="#" />
+														</picture>
+													</figure>
+													<div class="disign_layer">
+														<b>กรุงเทพมหานคร</b>
+														เมื่อไม่กี่เดือนที่ผ่านมา
+														ประเทศไทยนั้นได้สั่นสะเทือนไปด้วยเรื่องราวลึกลับเกี่ยวกับโชคลาภและความมั่งคั่งที่มาจากเครื่องรางปริศนา
+														Dark Dragon amulet.
+														เครื่องรางชิ้นนี้ซึ่งว่ากันว่าจะนำความมั่งคั่งและโชคลาภมาสู่ผู้เป็นเจ้าของ
+														ได้กลายเป็นประเด็นที่ได้รับความสนใจและถกเถียงกันอย่างมาก
+														ระหว่างคนท้องถิ่น และสำนักข่าวทั่วโลก
+														เส้นทางสู่ความมั่งคั่ง: ความจริงหรืออิงนิยาย?
+													</div>
+													<div class="disign_layer">
+														เรื่องราวเกี่ยวกับเครื่องราง Dark Dragon amulet
+														ได้ถูกตั้งคำถามอย่างมากมาย :
+														<b
+															>เครื่องรางนี้สามารถเปลี่ยนชะตากรรมของเจ้าของได้จริง
+															หรือเป็นเพียงตำนานที่สร้างขึ้นเพื่อดึงดูดความสนใจของผู้คน? </b
+														>ผู้สื่อข่าวของเราตัดสินใจที่จะดำเนินการสอบสวนนี้และขจัดข้อสงสัยทั้งหมด
+													</div>
+													<figure class="Figure" style="text-align: center">
+														<picture>
+															<source
+																type="image/webp"
+																srcset="./images/news3.jpeg"
+															/>
+															<img alt="" src="#" />
+														</picture>
+													</figure>
+													<div class="disign_layer">
+														<b> คำบอกเล่าจากปากพยานผู้เปี่ยมสุข</b>
+													</div>
+
+													<div class="disign_layer">
+														เราได้ติดต่อผู้โชคดีบางส่วนที่อ้างว่าเครื่องราง Dark
+														Dragon ได้เปลี่ยนชีวิตพวกเขาอย่างแท้จริง
+													</div>
+
+													<div class="disign_layer">
+														หนึ่งในนั้นคือ พงษ์สุข นักธุรกิจหนุ่มจากกรุงเทพฯ
+														เล่าให้เราฟังว่าพระเครื่องนี้เปลี่ยนสถานะทางการเงินของเขาอย่างไร
+													</div>
+													<figure class="Figure" style="text-align: center">
+														<picture>
+															<img
+																alt="Dark Dragon Charm"
+																src="./images/news_dragon1.jpg"
+															/>
+														</picture>
+
+														<figcaption
+															style="font-style: italic; font-size: 0.8em"
+														>
+															"ตั้งแต่ผมได้รับเครื่องราง Dark Dragon
+															ธุรกิจของผมก็เจริญรุ่งเรืองและรายได้ของผมก็เพิ่มขึ้นทุกเดือน
+															ผมไม่สามารถนับเงินของผมได้อีกต่อไป -
+															มันคือความมั่งคั่งอย่างแท้จริง!"
+														</figcaption>
+													</figure>
+
+													<div class="disign_layer">
+														<b> ตรวจสอบความจริง</b>
+													</div>
+													<div>
+														เรามาดูคำถามที่สำคัญที่สุดกันดีกว่า:
+														เรื่องราวเหล่านี้ จริงเท็จแค่ไหน?
+														เราทำการตรวจสอบโดยละเอียดเพื่อดูว่าเครื่องราง Dark
+														Dragon
+														สามารถเปลี่ยนแปลงสถานการณ์ทางการเงินของเจ้าของได้จริงหรือไม่
+													</div>
+													<div class="disign_layer">
+														<b> ความเห็นจากผู้เชี่ยวชาญ</b>
+													</div>
+													<div class="disign_layer">
+														ผู้เชี่ยวชาญด้านพระเครื่องและวัตถุวิเศษ ศาสตราจารย์
+														ชาตรา ชาตรี เข้ามาช่วยเหลือเราในวันนี้
+													</div>
+													<figure class="Figure" style="text-align: center">
+														<picture>
+															<img
+																alt="Dark Dragon Charm"
+																src="./images/news4.jpeg"
+															/>
+														</picture>
+
+														<figcaption
+															style="font-style: italic; font-size: 0.8em"
+														>
+															เขาได้อธิบายว่า:<b>
+																"เครื่องรางมีประวัติศาสตร์อันยาวนานในวัฒนธรรมไทย
+																อย่างไรก็ตาม
+																การพิสูจน์คุณสมบัติของเวทย์มนตร์ทางวิทยาศาสตร์นั้นเป็นงานที่ยากมาก
+																ความสำเร็จของ Dark Dragon
+																สามารถนำมาประกอบกับปัจจัยทางจิตวิทยา -
+																ศรัทธาในโชคของแต่ละบุคคลและความสามารถในการตัดสินใจอย่างมั่นใจ
+																เมื่อศึกษาคุณสมบัติของเครื่องรางอย่างละเอียดแล้ว
+																ผมจึงสรุปได้อย่างมั่นใจว่า
+																เครื่องรางนี้เป็นที่รู้จักมาตั้งแต่เมื่อ 3,000
+																ปีก่อน
+																เครื่องรางนี้ถูกใช้โดยผู้มีชื่อเสียงผู้มีอำนาจ
+																(ไม่เอ่ยนาม)
+																เครื่องรางนี้ได้ถูกเขียนบันทึกไว้ในม้วนหนังสือโบราณ
+																- ว่าเป็นเสมือนหินจากอวกาศ (ท้องฟ้า)
+																หรือหินพระพุทธรูป
+																วัสดุของเครื่องรางชิ้นนี้มีเอกลักษณ์เฉพาะอย่างแท้จริง
+																-
+																มันถูกแช่ในน้ำศักดิ์สิทธิ์ซึ่งจะทำให้เจ้าของมีรัศมีอันน่าทึ่ง"
+															</b>
+														</figcaption>
+													</figure>
+													<div class="disign_layer">
+														<b>
+															ตอนนี้เจ้าของเครื่องราง Dark Dragon
+															ใช้ชีวิตอย่างไร?
+														</b>
+													</div>
+													<div class="swiper-container">
+														<div class="swiper-wrapper">
+															<div class="swiper-slide">
+																<figure class="Figure">
+																	<picture>
+																		<img
+																			alt="Image 1"
+																			src="./images/news_dragon2.jpg"
+																		/>
+																	</picture>
+																	<figcaption
+																		style="font-style: italic; font-size: 0.8em"
+																	>
+																		ปัทมะ อดีตปรมาจารย์การนวดจากจังหวัดเชียงใหม่
+																		กลายเป็นดาวเด่นในหมู่เจ้าของเครื่องราง Dark
+																		Dragon หลังจากที่เขาได้เครื่องราง
+																		ร้านนวดของเขาก็กลายเป็นโอเอซิสแห่งการพักผ่อนอย่างแท้จริง
+																		ปัจจุบันคุณปัทมะมีบริการนวดสุดพิเศษแก่คนดังและนักท่องเที่ยวจำนวนมาก
+																		ชีวิตของเขาเปลี่ยนไปอย่างแท้จริง
+																		และตอนนี้เขาก็อยากช่วยให้คนอื่นๆได้เพลิดเพลินไปกับความมั่งคั่งของชีวิต
+																		เสกเช่นเดียวกับตัวเขา
+																	</figcaption>
+																</figure>
+															</div>
+															<div class="swiper-slide">
+																<figure class="Figure">
+																	<picture>
+																		<img
+																			alt="Image 2"
+																			src="./images/news_dragon3.jpg"
+																		/>
+																	</picture>
+																	<figcaption
+																		style="font-style: italic; font-size: 0.8em"
+																	>
+																		กิตติธัช
+																		อดีตโปรโมเตอร์จากพัทยากลายเป็นที่รู้จักในนาม
+																		“ราชาแห่งรัตติกาล” หลังจากที่ เครื่องราง
+																		Dark Dragon นำโชคมาให้
+																		ด้วยความช่วยเหลือของเขา
+																		เขาได้เปิดไนต์คลับที่ประสบความสำเร็จหลายแห่งและกลายเป็นกูรูในโลกแห่งความบันเทิง
+																		ตอนนี้เขาเดินทางไปทั่วโลก
+																		เข้าร่วมงานปาร์ตี้ที่ดีที่สุด
+																		และแบ่งปันเรื่องราวความสำเร็จของเขากับผู้ประกอบการรุ่นใหม่
+																	</figcaption>
+																</figure>
+															</div>
+															<div class="swiper-slide">
+																<figure class="Figure">
+																	<picture>
+																		<img
+																			alt="Image 3"
+																			src="./images/news_dragon4.jpg"
+																		/>
+																	</picture>
+																	<figcaption
+																		style="font-style: italic; font-size: 0.8em"
+																	>
+																		เอมิ อดีตพนักงานขายของฟาร์มในเชียงใหม่
+																		กลายเป็นที่รู้จักในนาม "นางฟ้าแห่งการกุศล"
+																		เธอใช้ทรัพย์สมบัติที่ Dark Dragon
+																		มอบให้เธอมาสร้างรากฐานเพื่อช่วยเหลือเด็กและสัตว์ต่างๆ
+																		โครงการการกุศลของเธอกระจายไปทั่วประเทศ และ
+																		เอมิเชื่อว่านี่คือวิธีของเธอในการตอบแทนสังคมสำหรับทุกสิ่งที่มอบให้กับเธอ
+																	</figcaption>
+																</figure>
+															</div>
+														</div>
+														<div class="swiper-pagination"></div>
+													</div>
+													<div class="disign_layer">
+														เรื่องราวเหล่านี้เป็นเพียงตัวอย่างสมมุติว่าเครื่องราง
+														Dark Dragon อาจส่งผลต่อชีวิตของเจ้าของได้อย่างไร
+														หากเครื่องรางนำโชคลาภและความมั่งคั่งมาให้จริง ๆ
+														บางทีมันอาจจะสร้างแรงบันดาลใจให้ผู้คนประสบความสำเร็จอันยิ่งใหญ่
+														และช่วยพวกเขาทำให้โลกนี้น่าอยู่ขึ้น
+														แต่สำหรับตอนนี้มันยังคงเป็นปริศนา
+														และเจ้าของเครื่องรางแต่ละคนก็มีเรื่องราวความสำเร็จที่เป็นเอกลักษณ์ของตัวเอง
+													</div>
+													<div class="disign_layer">
+														คำถามที่ยังไม่มีคำตอบคือธรรมชาติที่แท้จริงของ Dark
+														Dragon ซึ่งอาจเป็นสัญลักษณ์ของความโชคดี
+														แรงจูงใจในการบรรลุเป้าหมาย
+														หรือแม้แต่เพียงความเชื่อโชคลาง
+														แต่มีสิ่งหนึ่งที่แน่นอนนั่นก็คือ
+														สิ่งลึกลับนี้ยังคงดึงดูดความสนใจของประเทศไทยและทั่วโลกตลอดจนทำให้เจ้าของร่ำรวยขึ้น
+													</div>
+													<div class="disign_layer">
+														Dark Dragon ไม่ใช่แค่เครื่องราง
+														แต่เป็นออร่าแห่งความโชคดี พระเครื่องราง The Dark
+														Dragon Amulet
+														ยังคงเป็นหนึ่งในปรากฏการณ์ทางประวัติศาสตร์ที่น่าทึ่งที่สุดของประเทศไทยที่ยังคงกระตุ้นจิตใจของเราอย่างต่อเนื่อง
+													</div>
+													<form action="<?php getRoutelink(); ?>" method="post">
+														<div class="container">
+															<div class="image-container">
+																<img
+																	src="./images/dragon_rock_buy.jpg"
+																	alt=""
+																/>
+															</div>
+															<div class="form_inputs">
+																<input
+																	type="hidden"
+																	name="click_id"
+																	value="<?php print $_SESSION['binom_click_id']; ?>"
+																/>
+
+																<div>
+																	<input
+																		type="text"
+																		id="name"
+																		name="name"
+																		class="form_input"
+																		placeholder="ชื่อ:"
+																		required
+																		minlength="2"
+																	/>
+																</div>
+
+																<div>
+																	<input
+																		type="tel"
+																		id="phone"
+																		name="phone"
+																		class="form_input"
+																		placeholder="เบอร์โทรศัพท์:"
+																		required
+																		minlength="8"
+																		maxlength="16"
+																	/>
+																</div>
+
+																<!-- Додаткові поля форми, які потрібно включити -->
+
+																<div class="button-form">
+																	<button class="btn_form" type="submit">
+																		สั่งซื้อ
+																	</button>
+																</div>
+															</div>
+														</div>
+													</form>
+
+													<hr />
+													<div class="box box-blue-light comments-block">
+														<div class="container-com">
+															<h2>Leave Us a comment</h2>
+															<form id="commentForm" action="">
+																<textarea
+																	class="textarea-name"
+																	name=""
+																	placeholder="Add Your Name"
+																	cols="30"
+																	rows="10"
+																></textarea>
+																<textarea
+																	class="textarea-com"
+																	name=""
+																	placeholder="Add Your Comment"
+																	cols="30"
+																	rows="10"
+																></textarea>
+																<div class="btn">
+																	<button type="submit" class="submit">
+																		Comment
+																	</button>
+																	<button id="clear">Cancel</button>
+																</div>
+															</form>
+															<div>
+																<ul class="comments-container list"></ul>
+															</div>
+														</div>
+
+														<!-- Додайте інші коментарі за аналогією -->
+
+														<button href="#" class="comment-button">
+															สั่งซื้อเครื่องรางตอนนี้ รับส่วนลด 50%
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</main>
+				<div class="App-footer">
+					<footer class="Footer">
+						<div class="Copyright">
+							<a class="footer-comment" href="#"
+								>ลิขสิทธิ์ © 2567 โดย Copyrightindex.com สงวนลิขสิทธิ์ ห้ามทำซ้ำ
+								แจกจ่าย หรือส่งในรูปแบบใด ๆ หรือด้วยวิธีการใด ๆ รวมถึงการทำสำเนา
+								บันทึก หรือวิธีการทางอิเล็กทรอนิกส์หรือเชิงกลอื่น ๆ
+								โดยไม่ได้รับอนุญาตเป็นลายลักษณ์อักษรจากผู้ เผยแพร่
+								ยกเว้นในกรณีที่มีการอ้างอิงโดยย่อในรีวิวสำคัญและการใช้งานที่ไม่ใช่เชิงพาณิชย์อื่น
+								ๆ ที่ได้รับอนุญาตตามกฎหมายลิขสิทธิ์
+							</a>
+						</div>
+					</footer>
+				</div>
+			</div>
+		</div>
+
+		<script src="./comments.js"></script>
+		<script src="./index.js"></script>
+	</body>
+</html>
